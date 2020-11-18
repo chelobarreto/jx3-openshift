@@ -1,0 +1,12 @@
+spec:
+    spec:
+      containers:
+        - name: tekton-pipelines-controller
+          env:
+            - name: HTTP_PROXY
+              value: 'http://172.20.16.29:3128'
+            - name: HTTPS_PROXY
+              value: 'http://172.20.16.29:3128'
+            - name: NO_PROXY
+              value: >-
+                .cluster.local,.lab-okd4.mecon.ar,.mecon.ar,.svc,0.0.0.0,10.0.0.0/16,10.128.0.0/14,127.0.0.1,169.254.169.254,172.20.33.0/24,172.30.0.0/16,api-int.lab-okd4.mecon.ar,etcd-0.lab-okd4.mecon.ar,etcd-1.lab-okd4.mecon.ar,etcd-2.lab-okd4.mecon.ar,localhost,svc
