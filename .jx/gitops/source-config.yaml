@@ -9,4 +9,5 @@ spec:
     providerKind: github
     repositories:
     - name: primer-jenkins-x
+    - name: proyecto2
     scheduler: in-repo
