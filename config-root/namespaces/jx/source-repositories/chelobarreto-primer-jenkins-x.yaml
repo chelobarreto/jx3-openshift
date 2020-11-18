@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: chelobarreto
+    provider: github
+    repository: primer-jenkins-x
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: chelobarreto-primer-jenkins-x
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/chelobarreto/primer-jenkins-x.git
+  org: chelobarreto
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: primer-jenkins-x
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/chelobarreto/primer-jenkins-x

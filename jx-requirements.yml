@@ -7,8 +7,6 @@ buildPacks:
     gitRef: master
     gitURL: https://github.com/jenkins-x/jx3-pipeline-catalog.git
 cluster:
-  gitKind: gitlab
-  gitServer: https://dgiaf-gitlab.mecon.ar
   chartRepository: http://bucketrepo/bucketrepo/charts
   clusterName: todo
   devEnvApprovers:
