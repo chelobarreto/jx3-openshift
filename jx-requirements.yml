@@ -13,28 +13,46 @@ cluster:
   clusterName: todo
   devEnvApprovers:
   - todo
-  environmentGitOwner: "todo"
+  environmentGitOwner: todo
   gitKind: github
   gitName: github
   gitServer: https://github.com
   namespace: jx
-  project:  ""
   provider: openshift
-  registry: "ghcr.io"
-  zone: ""
+  registry: ghcr.io
 environments:
-- key: dev
-  owner: ""
-  repository: ""
-- key: staging
-  owner: ""
-  repository: ""
-- key: production
-  owner: ""
-  repository: ""
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: dev
+  owner: chelobarreto
+  repository: jx3-openshift
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: staging
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: production
 gitops: true
 ingress:
-  domain: "apps.lab-okd4.mecon.ar"
+  domain: apps.lab-okd4.mecon.ar
   externalDNS: false
   namespaceSubDomain: -jx.
   tls:
@@ -42,6 +60,8 @@ ingress:
     enabled: false
     production: false
 kaniko: true
+pipelineUser:
+  username: chelobarreto
 repository: bucketrepo
 secretStorage: local
 storage:
