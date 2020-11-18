@@ -81,6 +81,8 @@ spec:
           name: workspace-volume
         workingDir: /workspace/source
         env:
+        - name: XDG_CONFIG_HOME
+          value: /workspace/xdg_config
         - name: HTTP_PROXY
           value: 'http://172.20.16.29:3128'
         - name: HTTPS_PROXY
